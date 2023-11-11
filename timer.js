@@ -21,7 +21,8 @@ function updateTimers() {
 		timer.innerText = timeToDisplay;
 		setTimeout(updateTimers, 100);
 	} else {
-        var timeToDisplay = "Task is finished";
+        var timeToDisplay = "Task is finished, removed from list";
         timer.innerText = timeToDisplay;
+        endTask(localStorage.getItem("idTaskStarted"));
 	}
 }
