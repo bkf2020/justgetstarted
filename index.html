@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Just Get Started: Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+    <body>
+        <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <h3 class="navbar-item title is-3 has-text-link-dark">Just Get Started</h3>
+            </div>
+            <div class="navbar-start">
+                <a class="navbar-item">About</a>
+                <a class="navbar-item">Dashboard</a>
+            </div>
+            <!--
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="navbar-item button is-info is-outlined">Login</a>
+                        <a class="navbar-item button">Register</a>
+                    </div>
+                </div>
+            </div>
+            -->
+        </nav>
+        <div class="container mt-5 px-3">
+            <h3 class="title is-3 has-text-success-dark">Dashboard</h3>
+            <div class="box mb-5" style="display: none;" id="taskTime">
+                <center>
+                    <span class="is-size-4" id="currentTask">Current task:</span><br/>
+                    <span end-time="0" current-time="0" id="timer" class="is-size-4"></span>
+                </center>
+            </div>
+            <div class="box mb-5">
+                <h4 class="title is-4 has-text-danger-dark">Your Tasks for Today</h4>
+                <table class="table is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th style="width: 70%;">Task Description</th>
+                            <th>Time of task (minutes)</th>
+                            <th>Start</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+                    </tbody>
+                </table>
+                <div class="field has-addons mt-3">
+                    <div class="control is-expanded">
+                        <input id="inputTask" class="input" type="text" placeholder="Input your task">
+                    </div>
+                    <div class="control">
+                        <input id="inputLength" class="input" type="number" placeholder="Length of task (minutes)">
+                    </div>
+                    <div class="control">
+                        <button class="button is-info" id="addButton">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            ::placeholder {
+                color: #333 !important;
+            }
+        </style>
+        <script type="text/javascript" src="timer.js"></script>
+        <script type="text/javascript" src="todo.js"></script>
+    </body>
+</html>
